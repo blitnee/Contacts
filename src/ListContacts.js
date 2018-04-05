@@ -17,6 +17,10 @@ class ListContacts extends Component {
 		this.setState({ query: query.trim() })
 	}
 
+	clearQuery = (query) => {
+		this.setState({ query: '' })
+	}
+
 	render() {
 		const { contacts, onDeleteContact } = this.props
 		const { query } = this.state
@@ -44,6 +48,7 @@ class ListContacts extends Component {
 				{showingContacts.length !== contacts.length && (
 					<div className='showing-contacts'>
 						<span>Now showing {showingContacts.length} of {contacts.length} total</span>
+						<button onClick={this.clearQuery}>Show All</button>
 					</div>
 				)}
 
