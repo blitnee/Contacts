@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import escapeRegExp from 'escape-string-regexp'
 
 class ListContacts extends Component {
 	static propTypes = {
@@ -16,9 +17,16 @@ class ListContacts extends Component {
 	}
 
 	render() {
+		let showingContacts
+		if (this.state.query) {
+			const match = new RegExp(escapeRegExp(this.state.query), 'i')
+			showingContacts = this.props.contacts.filter((contact) => match.test(contact.name))
+		} else {
+			showingContacts = this.props.contacts
+		}
+
 		return (
 			<div className='list-contacts'>
-				{JSON.stringify(this.state)}
 				<div className='list-contacts-top'>
 					<input
 						className='search-contacts'
@@ -28,7 +36,7 @@ class ListContacts extends Component {
 						onChange={(event) => this.updateQuery(event.target.value)} />
 				</div>
 				<ol className='contact-list'>
-					{this.props.contacts.map((contact) => (
+					{showingContacts.map((contact) => (
 						<li key={contact.id} className='contact-list-item'>
 							<div className='contact-avatar' style={{
 								backgroundImage: `url(${contact.avatarURL})`
