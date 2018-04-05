@@ -31,6 +31,9 @@ import * as ContactsAPI from './utils/ContactsAPI'
 			   			<ListContacts
 			   			onDeleteContact={this.removeContact}
 			   			contacts={this.state.contacts}
+			   			onNavigate={() => {
+			   				this.setState({ screen: 'create' })
+			   			}}
 			   			/>
 		    		)}
 		    		{this.state.screen === 'create' && (
