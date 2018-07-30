@@ -8,18 +8,21 @@ const defaultData = {
     {
       id: 'richard',
       name: 'Richard Kalehoff',
+      email: 'richardkalehoff@email.com',
       handle: '@richardkalehoff',
       avatarURL: config.origin + '/richard.jpg'
     },
     {
       id: 'karen',
       name: 'Karen Isgrigg',
+      email: 'karenisgrigg@email.com',
       handle: '@karen_isgrigg',
       avatarURL: config.origin + '/karen.jpg'
     },
     {
       id: 'tyler',
       name: 'Tyler McGinnis',
+      email: 'tylermcginnis@email.com',
       handle: '@tylermcginnis',
       avatarURL: config.origin + '/tyler.jpg'
     }

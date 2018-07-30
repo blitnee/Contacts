@@ -66,6 +66,7 @@ class ListContacts extends Component {
 							}}/>
 							<div className='contact-details'>
 								<p>{contact.name}</p>
+								<p>{contact.email}</p>
 							</div>
 							<button onClick={() => onDeleteContact(contact)} className='contact-remove'>Remove</button>
 						</li>
