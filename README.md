@@ -6,6 +6,8 @@ This application allows users to view their contacts directory, search contacts,
 * `CreateContact` - Displays a form for users to add a new contact
 * `ImageInput` - Handles avatar image upload
 
+![Home display with contacts list for Contacts app](https://raw.githubusercontent.com/blitnee/contacts-app/master/src/imgs/contact-home.png)
+
 ## Instructions
 
 1. Download a copy of the project locally or clone the repository:
